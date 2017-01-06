@@ -9,11 +9,15 @@ hArray[2] = nhArray[2].slice(0,2);
 
 // comparar si es pm o am
 if(hora === 'pm'){
-	if(hArray[0] === '12'){
-	console.log("00:"+hArray[1]+":"+hArray[2]);
+	if(nhArray[0] <'12'){
+    	console.log(parseFloat(nhArray[0])+12+":"+nhArray[1]+":"+nhArray[2]);
     }else{
-	console.log(parseFloat(hArray[0])+12+":"+hArray[1]+":"+hArray[2]);
+    	console.log(nhArray[0]+":"+nhArray[1]+":"+nhArray[2]); 
     }
 }else{
-  console.log(parseFloat(hArray[0])+":"+hArray[1]+":"+hArray[2]);
+	if(nhArray[0] === '12'){
+    	console.log("00:"+nhArray[1]+":"+nhArray[2]);
+    }else{
+		console.log(nhArray[0]+":"+nhArray[1]+":"+nhArray[2]);
+    }
 }
